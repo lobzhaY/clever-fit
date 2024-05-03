@@ -1,0 +1,55 @@
+@import '../../../../../styles/sizes-variables.scss';
+@import '../../../../../styles/variables.scss';
+
+.cardItemWrapper {
+  width: 156px;
+  height: 138px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid $color-neutral-4;
+  border-radius: 2px;
+
+  font-family: $main-font-family;
+  line-height: $line-height-s;
+  text-align: center;
+
+  p {
+    height: 50px;
+    margin: 0;
+    color: $color-neutral-10;
+    font-size: 38px;
+    font-weight: $font-weight-m;
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    color: $color-neutral-7;
+    font-size: $font-size-s;
+    font-weight: $font-weight-s;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .cardItemWrapper {
+    width: 100%;
+    height: 64px;
+    padding: $padding-m;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+    border: none;
+  }
+}

@@ -1,0 +1,115 @@
+@import '../../../styles/sizes-variables.scss';
+@import '../../../styles/variables.scss';
+
+.breadcrumb {
+  width: $width-all;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $color-primary-light-1;
+
+  .ant-breadcrumb {
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+    text-align: left;
+    color: $color-neutral-7;
+    margin: 0;
+
+    .ant-breadcrumb-separator {
+      color: $color-neutral-7;
+    }
+  }
+
+  .ant-breadcrumb li:last-child {
+    color: $color-neutral-10;
+  }
+}
+
+.breadcrumbContainer {
+  width: $width-all;
+  height: 72px;
+  background-color: $color-primary-light-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  nav ol li {
+    padding: 6px 0;
+
+    span {
+      font-family: $main-font-family;
+      font-weight: $font-weight-sm;
+      font-size: $font-size-ml;
+      line-height: $line-height-s;
+      color: $color-neutral-10;
+    }
+  }
+
+  .settingsWrapper {
+    height: 32px;
+
+    button {
+      border-radius: $border-radius-s;
+      padding: 4px 15px;
+      box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.02);
+    }
+  }
+}
+
+.breadcrumbBack {
+  background-color: $color-primary-light-1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $gap-s;
+
+  span {
+    font-size: $font-size-s;
+    color: $color-neutral-10;
+  }
+
+  nav ol li {
+    padding: 6px 0;
+
+    span {
+      font-family: $main-font-family;
+      font-weight: $font-weight-sm;
+      font-size: $font-size-ml;
+      line-height: $line-height-s;
+      color: $color-neutral-10;
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+  .breadcrumbContainer {
+    height: 82px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    nav ol li {
+      padding: 0;
+
+      span {
+        font-weight: $font-weight-s;
+        font-size: $font-size-s;
+      }
+    }
+  }
+
+  .settingsWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .breadcrumbBack {
+    nav ol li {
+      span {
+        font-weight: $font-weight-s;
+        font-size: $font-size-s;
+      }
+    }
+  }
+}

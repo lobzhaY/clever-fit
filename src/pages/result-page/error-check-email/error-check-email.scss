@@ -1,0 +1,92 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/sizes-variables.scss';
+
+.error-check-email-wrapper {
+  width: 539px;
+  height: 550.27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: $padding-xl $padding-l $padding-x;
+
+  border-radius: 2px;
+  background: $color-neutral-1;
+  box-sizing: border-box;
+
+  .container {
+    width: 475px;
+    height: 430.27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: $gap-m;
+    box-sizing: border-box;
+
+    .image-wrapper {
+      width: 253.49px;
+      height: 293.27px;
+
+      img {
+        width: $width-all;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+
+    .text-wrapper {
+      font-family: $main-font-family;
+      text-align: center;
+
+      h3 {
+        color: $color-neutral-10;
+        font-size: 24px;
+        font-weight: 500;
+        margin: 0;
+        line-height: $line-height-s;
+      }
+
+      p {
+        color: $color-neutral-7;
+        font-size: $font-size-s;
+        font-weight: $font-weight-s;
+        margin: 0;
+        line-height: $line-height-s;
+      }
+    }
+
+    button {
+      width: 74px;
+      height: $height-s;
+      padding: 4px 15px;
+
+      box-sizing: border-box;
+      border: 1px solid $color-primary-light-6;
+      border-radius: 2px;
+      box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+      background: $color-primary-light-6;
+
+      color: $color-neutral-1;
+      font-family: $main-font-family;
+      font-size: $font-size-s;
+      font-weight: $font-weight-s;
+      line-height: $line-height-s;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  .error-check-email-wrapper {
+    width: 328px;
+    height: 568.27px;
+    padding: $padding-xl $padding-l $padding-x;
+
+    .container {
+      width: 264px;
+      height: 448.27px;
+    }
+  }
+}

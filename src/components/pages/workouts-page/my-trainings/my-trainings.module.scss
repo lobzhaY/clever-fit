@@ -1,0 +1,118 @@
+@import '../../../../styles/sizes-variables.scss';
+@import '../../../../styles/variables.scss';
+
+.myTrainingActiveWrapper {
+  width: $width-all;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  button {
+    height: $height-s;
+    padding: $padding-buttons;
+    box-sizing: border-box;
+    border: 1px solid $color-primary-light-6;
+    border-radius: $border-radius-s;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+    background: $color-primary-light-6;
+
+    span {
+      color: $color-neutral-1;
+      font-family: $main-font-family;
+      font-size: $font-size-s;
+      font-weight: $font-weight-s;
+      line-height: $line-height-s;
+      text-align: center;
+    }
+  }
+}
+
+.myTrainingsWrapper {
+  width: 555px;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-m;
+  padding-top: $padding-ml;
+
+  .tableWrapper {
+    padding-bottom: 30px;
+  }
+}
+
+.buttonEdit {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: $color-primary-light-6;
+}
+
+.periodCell {
+  color: $color-neutral-10;
+  font-family: $main-font-family;
+  font-size: $font-size-s;
+  font-weight: $font-weight-s;
+  line-height: $line-height-s;
+  text-align: left;
+}
+
+.exerciseCell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: $color-neutral-10;
+  font-family: $main-font-family;
+  font-size: $font-size-s;
+  font-weight: $font-weight-s;
+  line-height: $line-height-s;
+  text-align: left;
+}
+
+.buttonEdit:disabled {
+  border: 0;
+  background-color: none;
+}
+
+:global {
+  .ant-btn-default {
+    border-color: transparent;
+  }
+  .ant-table-cell {
+    position: relative;
+    z-index: 0;
+  }
+
+  #form-create_withPeriod {
+    z-index: 999;
+    width: 14px;
+    position: relative;
+
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .ant-table-wrapper .ant-table-pagination.ant-pagination {
+    margin: 0;
+    margin-top: 24px;
+
+    li {
+      margin-inline-end: 0;
+    }
+  }
+
+  .ant-popover .ant-popover-inner .ant-popover-title {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .myTrainingsWrapper {
+    width: 100%;
+  }
+}

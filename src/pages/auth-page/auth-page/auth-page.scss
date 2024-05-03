@@ -1,0 +1,124 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/sizes-variables.scss';
+
+.auth-wrapper {
+  width: 539px;
+  height: 686px;
+  padding: $padding-xl $padding-l;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  background: $color-neutral-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 48px;
+  box-sizing: border-box;
+
+  .logo {
+    width: 309px;
+    height: 76px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    img {
+      width: $width-all;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .content {
+    width: 368px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: $gap-l;
+
+    .tabs {
+      width: $width-all;
+      gap: $gap-l;
+
+      .ant-tabs-nav {
+        width: $width-all;
+        height: 46px;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .ant-tabs-nav-list {
+        width: $width-all;
+        justify-content: center;
+        align-items: center;
+      }
+      .ant-tabs-tab {
+        width: 50%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $padding-m 0;
+      }
+      .ant-tabs-tab-btn {
+        color: $color-neutral-10;
+        font-family: $main-font-family;
+        font-size: $font-size-m;
+        font-weight: $font-weight-s;
+        line-height: $line-height-s;
+        text-align: left;
+      }
+      .ant-tabs-tab-active div {
+        color: $color-primary-light-6;
+        font-family: $main-font-family;
+        font-size: $font-size-m;
+        font-weight: $font-weight-s;
+        line-height: $line-height-s;
+        text-align: left;
+      }
+      .ant-tabs-ink-bar {
+        margin: 0;
+        padding: 0;
+        height: 2px;
+        background: $color-primary-light-6;
+        display: flex;
+        align-items: center;
+        width: 50% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  .auth-wrapper {
+    width: 328px;
+    min-height: 564px;
+    height: auto;
+    padding: $padding-l $padding-m;
+    gap: $gap-l;
+
+    .logo {
+      width: 203px;
+      height: 50px;
+    }
+
+    .content {
+      width: $width-all;
+      gap: $gap-m;
+
+      .tabs {
+        width: $width-all;
+        gap: $gap-m;
+
+        .ant-tabs-tab-btn {
+          font-size: $font-size-s;
+        }
+
+        .ant-tabs-tab-active div {
+          font-size: $font-size-s;
+        }
+      }
+    }
+  }
+}

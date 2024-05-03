@@ -1,0 +1,164 @@
+@import '../../../../styles/sizes-variables.scss';
+@import '../../../../styles/variables.scss';
+
+.drawer {
+  border-radius: 8px 0 0 8px;
+  height: 100%;
+}
+
+.drawerTitle {
+  font-family: $main-font-family;
+  font-weight: $font-weight-sm;
+  font-size: $font-size-ml;
+  line-height: $line-height-s;
+  color: $color-neutral-10;
+  margin: 0;
+}
+
+.drawerBtn {
+  border: 1px solid $color-primary-light-6;
+  border-radius: $border-radius-s;
+  padding: 4px 15px;
+  width: $width-all;
+  height: $height-s;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+  background: $color-primary-light-6;
+
+  font-family: $main-font-family;
+  font-weight: $font-weight-s;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  text-align: center;
+  color: $color-neutral-1;
+
+  &:disabled {
+    border: 1px solid $color-neutral-5;
+    background: $color-neutral-3;
+    color: $color-neutral-6;
+  }
+}
+
+.drawerBody {
+  padding-right: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-m;
+}
+
+.drawerActivePro {
+  padding: 14px 0;
+  background: $color-primary-light-1;
+
+  p {
+    font-family: $main-font-family;
+    font-weight: $font-weight-sm;
+    font-size: $font-size-m;
+    line-height: $line-height-s;
+    text-align: center;
+    color: $color-primary-light-10;
+    margin: 0;
+  }
+}
+
+.blockCost {
+  width: $width-all;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  h6 {
+    font-family: $main-font-family;
+    font-weight: $font-weight-m;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+    color: $color-neutral-10;
+    margin: 0;
+  }
+}
+
+.radioSpace {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+}
+
+.radioItem {
+  width: 100%;
+
+  label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    &:last-child {
+      width: 100%;
+      padding-right: 16px;
+    }
+  }
+}
+
+.radioLabel {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    font-family: $main-font-family;
+    font-weight: $font-weight-s;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+    color: $color-neutral-10;
+  }
+
+  h6 {
+    font-family: $main-font-family;
+    font-weight: $font-weight-sm;
+    font-size: $font-size-m;
+    line-height: $line-height-s;
+    color: $color-neutral-10;
+    margin: 0;
+    width: 135px;
+    text-align: center;
+  }
+}
+
+:global {
+  .ant-drawer .ant-drawer-content {
+    @media (max-width: 567px) {
+      height: 500px;
+    }
+  }
+
+  body > div:nth-child(3) > div > div.ant-drawer-content-wrapper > div > div.ant-drawer-header {
+    width: 100%;
+    padding: 24px 32px 16px;
+    border-bottom: 0;
+  }
+  body > div:nth-child(3) > div > div.ant-drawer-content-wrapper > div > div.ant-drawer-footer {
+    padding: 12px 32px;
+  }
+
+  .ant-radio-wrapper span.ant-radio + * {
+    width: 100%;
+    padding-inline-start: 0;
+  }
+
+  @media only screen and (min-width: 360px) and (max-width: 833px) {
+    body > div:nth-child(3) > div > div.ant-drawer-content-wrapper > div > div.ant-drawer-body {
+      padding: 24px 0 16px 16px;
+    }
+    :where(.css-dev-only-do-not-override-1k979oh).ant-drawer .ant-drawer-body {
+      flex: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .drawerBody {
+    padding-right: 16px;
+  }
+}

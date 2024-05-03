@@ -1,0 +1,1 @@
+export { MarathonsComponent } from './marathons';

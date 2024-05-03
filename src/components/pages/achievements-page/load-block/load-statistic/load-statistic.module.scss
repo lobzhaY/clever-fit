@@ -1,0 +1,44 @@
+@import '../../../../../styles/sizes-variables.scss';
+@import '../../../../../styles/variables.scss';
+
+.statisticWrapper {
+  width: 520px;
+  height: 374px;
+  border: 1px solid $color-neutral-4;
+  border-radius: $border-radius-s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statisticMonthWrapper {
+  width: 100%;
+  height: 374px;
+  border: 1px solid $color-neutral-4;
+  border-radius: $border-radius-s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.columnWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 834px) and (max-width: 1430px) {
+  .statisticWrapper {
+    width: 360px;
+    height: 236px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .statisticWrapper,
+  .statisticMonthWrapper {
+    width: 100%;
+    height: 236px;
+  }
+}

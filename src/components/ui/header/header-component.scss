@@ -1,0 +1,127 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/sizes-variables.scss';
+
+.header {
+  box-sizing: border-box;
+  width: $width-all;
+  padding: 16px 24px;
+  background-color: $color-primary-light-1;
+}
+
+.title-wrapper {
+  width: calc($width-all - 129px);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 6px 0;
+
+  .title {
+    color: $color-neutral-10;
+    font-size: 38px;
+    font-weight: $font-weight-m;
+    line-height: $line-height-s;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin: 12px 0;
+    font-family: $main-font-family;
+  }
+}
+
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.header__extra {
+  width: 129px;
+  height: 32px;
+}
+
+@media (min-width: 1440px) {
+  .title-wrapper {
+    width: calc($width-all - 130px);
+    height: auto;
+
+    .title {
+      width: 87%;
+      font-size: 38px;
+      font-weight: $font-weight-m;
+    }
+  }
+
+  .horizontal-container {
+    height: auto;
+  }
+
+  .header__extra {
+    width: 105px;
+  }
+}
+
+@media (min-width: 834px) and (max-width: 1439px) {
+  .title-wrapper {
+    width: calc($width-all - 105px);
+    height: auto;
+
+    .title {
+      width: auto;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  .horizontal-container {
+    height: auto;
+  }
+
+  .header__extra {
+    width: 105px;
+  }
+}
+
+@media (max-width: 567px) {
+  .header {
+    height: 166px;
+  }
+
+  .horizontal-container {
+    box-sizing: border-box;
+    height: 104px;
+  }
+
+  .title-wrapper {
+    width: 280px;
+    height: 104px;
+    padding: 6px 0;
+
+    .title {
+      font-size: 19px;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  .header__extra {
+    width: 32px;
+    height: 32px;
+
+    .button-wrapper {
+      width: $width-all;
+      height: 100%;
+
+      box-sizing: border-box;
+      border: 1px solid $color-neutral-5;
+      border-radius: 100px;
+      box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+      background: $color-neutral-1;
+
+      p {
+        display: none;
+      }
+    }
+  }
+}

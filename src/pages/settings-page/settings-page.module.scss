@@ -1,0 +1,140 @@
+@import '../../styles/sizes-variables.scss';
+@import '../../styles/variables.scss';
+
+.mainContainer {
+  width: $width-all;
+  height: 100%;
+  background-color: transparent;
+  padding-bottom: 42px;
+}
+
+.settingsContentContainer {
+  padding: $padding-ml;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.settingsBodyWrapper {
+  width: $width-all;
+  height: 100%;
+  background-color: $color-neutral-1;
+  border-radius: 8px;
+  padding: $padding-ml;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: $gap-m;
+}
+
+.settingsPageCardsWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: $gap-s;
+
+  h4 {
+    font-family: $main-font-family;
+    font-weight: $font-weight-sm;
+    font-size: $font-size-ml;
+    line-height: $line-height-s;
+    color: $color-neutral-10;
+    margin: 0;
+  }
+
+  .tariffsCardsContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: $gap-m;
+  }
+}
+
+.settingsBtn {
+  width: 100%;
+  height: 112px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 8px;
+
+  button {
+    height: 40px;
+    border-radius: $border-radius-s;
+    padding: 4px 15px;
+
+    font-family: $main-font-family;
+    font-weight: $font-weight-s;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+    text-align: center;
+  }
+
+  .writeReview {
+    border: 1px solid $color-primary-light-6;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+    background-color: $color-primary-light-6;
+    color: $color-neutral-1;
+  }
+
+  .lookReview {
+    color: $color-primary-light-6;
+  }
+}
+
+.drawer {
+  height: 100%;
+  overflow: scroll;
+}
+
+:global {
+  .ant-drawer .ant-drawer-content {
+    @media (max-width: 567px) {
+      min-height: 655px;
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .settingsContentContainer {
+    padding: 0;
+    padding-top: $padding-ml;
+  }
+
+  .settingsBodyWrapper {
+    border-radius: 0;
+    padding: $padding-m $padding-ml;
+  }
+
+  .settingsBtn {
+    height: 96px;
+    flex-direction: column;
+    gap: 16px;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .settingsPageCardsWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: $gap-s;
+
+    .tariffsCardsContainer {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+}

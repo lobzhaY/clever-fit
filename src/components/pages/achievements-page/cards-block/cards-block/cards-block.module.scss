@@ -1,0 +1,18 @@
+@import '../../../../../styles/sizes-variables.scss';
+@import '../../../../../styles/variables.scss';
+
+.cardsWrapper {
+  padding: $padding-ml 0;
+  width: $width-all;
+  display: flex;
+  align-items: flex-start;
+  gap: $gap-m;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .cardsWrapper {
+    padding: 0;
+    flex-direction: column;
+    gap: $gap-s;
+  }
+}

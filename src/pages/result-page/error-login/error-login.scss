@@ -1,0 +1,98 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/sizes-variables.scss';
+
+.error-login-wrapper {
+  width: 539px;
+  height: 345px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: $padding-xl $padding-l;
+  box-sizing: border-box;
+
+  border-radius: 2px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  background: $color-neutral-1;
+
+  .container {
+    width: 368px;
+    height: 217px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: $gap-m;
+
+    .icon {
+      width: $height-l;
+      height: $height-l;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        font-size: $height-m;
+        color: rgb(250, 173, 20);
+      }
+    }
+
+    .text-wrapper {
+      font-family: $main-font-family;
+      text-align: center;
+
+      h3 {
+        color: $color-neutral-10;
+        font-size: 24px;
+        font-weight: 500;
+        margin: 0;
+        line-height: $line-height-s;
+      }
+
+      p {
+        width: $width-all;
+        color: $color-neutral-7;
+        font-size: $font-size-s;
+        font-weight: $font-weight-s;
+        margin: 0 auto;
+        line-height: $line-height-s;
+      }
+    }
+
+    button {
+      width: $width-all;
+      height: $height-s;
+      padding: 4px 15px;
+
+      box-sizing: border-box;
+      border: 1px solid $color-primary-light-6;
+      border-radius: 2px;
+      box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+      background: $color-primary-light-6;
+
+      color: $color-neutral-1;
+      font-family: $main-font-family;
+      font-size: $font-size-s;
+      font-weight: $font-weight-s;
+      line-height: $line-height-s;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  .error-login-wrapper {
+    width: 328px;
+    height: 281px;
+    padding: $padding-l $padding-m;
+
+    .container {
+      width: 296px;
+      height: 217px;
+
+      button {
+        padding: 0 7px;
+      }
+    }
+  }
+}

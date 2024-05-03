@@ -1,0 +1,42 @@
+@import '../../styles/sizes-variables.scss';
+@import '../../styles/variables.scss';
+
+.mainContainer {
+  width: $width-all;
+  height: 100%;
+  background-color: transparent;
+  padding-bottom: 42px;
+}
+
+.profileContentContainer {
+  padding: $padding-ml;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.profileBodyWrapper {
+  width: $width-all;
+  height: 100%;
+  background-color: $color-neutral-1;
+  border-radius: 8px;
+  padding: $padding-ml;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .profileContentContainer {
+    padding: 0;
+    padding-top: $padding-ml;
+  }
+
+  .profileBodyWrapper {
+    border-radius: 0;
+    padding: $padding-m $padding-ml;
+  }
+}

@@ -1,0 +1,99 @@
+.inactive-implementation {
+  span.ant-badge-status-text {
+    color: blue;
+  }
+}
+div.ant-modal-wrap.ant-modal-confirm-centered.confirm-modal.ant-modal-centered
+  > div
+  > div.ant-modal-content
+  > div
+  > div
+  > div.ant-modal-confirm-body.ant-modal-confirm-body-has-title
+  > span {
+  color: rgb(255, 77, 79);
+}
+div.ant-modal-wrap.ant-modal-confirm-centered.confirm-modal-err.ant-modal-centered
+  > div
+  > div.ant-modal-content
+  > div
+  > div
+  > div.ant-modal-confirm-body.ant-modal-confirm-body-has-title
+  > div
+  > span
+  > h6 {
+  width: 70%;
+  margin: 0;
+  color: rgb(38, 38, 38);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+div.ant-modal-wrap.ant-modal-confirm-centered.confirm-modal-err.ant-modal-centered
+  > div
+  > div.ant-modal-content
+  > div
+  > div
+  > div.ant-modal-confirm-body.ant-modal-confirm-body-has-title
+  > div
+  > div
+  > p {
+  color: rgb(140, 140, 140);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-align: left;
+  margin: 0;
+}
+
+.ant-modal-confirm .ant-modal-confirm-btns {
+  box-shadow: none;
+  padding: 0;
+  height: auto;
+  margin-top: 24px;
+
+  button {
+    width: 99px;
+    padding: 4px 15px;
+    box-sizing: border-box;
+    border: 1px solid rgb(47, 84, 235);
+    border-radius: 2px;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+    background: rgb(47, 84, 235);
+
+    span {
+      color: rgb(255, 255, 255);
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 130%;
+      text-align: center;
+    }
+  }
+}
+
+div.ant-modal-wrap.ant-modal-confirm-centered.confirm-modal-err.ant-modal-centered
+  > div
+  > div.ant-modal-content
+  > div
+  > div {
+  padding: 16px 24px;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 830px) {
+  div.ant-modal-wrap.ant-modal-confirm-centered.confirm-modal-err.ant-modal-centered
+    > div
+    > div.ant-modal-content
+    > div
+    > div
+    > div.ant-modal-confirm-body.ant-modal-confirm-body-has-title
+    > div
+    > span
+    > h6 {
+    width: 100%;
+  }
+}

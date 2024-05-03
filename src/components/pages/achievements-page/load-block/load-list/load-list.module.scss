@@ -1,0 +1,75 @@
+@import '../../../../../styles/sizes-variables.scss';
+@import '../../../../../styles/variables.scss';
+
+.loadListWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loadListTitle {
+  margin: 0;
+  color: $color-neutral-10;
+  font-family: $main-font-family;
+  font-size: $font-size-s;
+  font-weight: $font-weight-s;
+  line-height: $line-height-s;
+  text-align: left;
+  white-space: break-spaces;
+}
+
+.loadListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.listMonthWrapper {
+  width: $width-all;
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+
+  .listMonthItemWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .listMonthItemTitle {
+      margin: 0;
+      color: $color-neutral-10;
+      font-family: $main-font-family;
+      font-size: $font-size-s;
+      font-weight: $font-weight-s;
+      line-height: $line-height-s;
+      text-align: left;
+    }
+  }
+}
+
+.collapsedTitle {
+  width: 138px;
+  margin: 0;
+  color: $color-neutral-10;
+  font-family: $main-font-family;
+  font-size: $font-size-s;
+  font-weight: $font-weight-s;
+  text-align: left;
+}
+
+.collapsedIcon {
+  color: $color-neutral-10;
+  font-size: $font-size-m;
+}
+
+:global {
+  .ant-collapse-header-text {
+    display: contents;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .loadListWrapper {
+    width: 100%;
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../styles/sizes-variables.scss';
+@import '../../styles/variables.scss';
+
+.main-container {
+  width: $width-all;
+  height: 100%;
+  background-color: transparent;
+  padding-bottom: 42px;
+}
+
+.feedback-content-container {
+  padding: $padding-ml;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+@media (max-width: 567px) {
+  .main-container {
+    box-sizing: border-box;
+    width: $width-all;
+  }
+
+  .feedback-content-container {
+    width: $width-all;
+  }
+}

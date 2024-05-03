@@ -1,0 +1,65 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/sizes-variables.scss';
+
+.footer {
+  width: $width-all;
+  height: 283px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 24px;
+  margin-top: auto;
+}
+
+.footer__extra {
+  width: 171px;
+  height: $height-s;
+
+  .footer__button {
+    width: $width-all;
+    height: 100%;
+    padding: 6.4px 15px;
+    border-radius: 2px;
+
+    p {
+      color: $color-primary-light-6;
+      font-size: $font-size-m;
+      font-weight: $font-weight-s;
+      text-align: center;
+      margin: 0;
+      font-family: $main-font-family;
+    }
+  }
+}
+
+@media (max-width: 835px) {
+  .footer {
+    height: 489px;
+  }
+}
+
+@media (max-width: 567px) {
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0 16px;
+    gap: $gap-m;
+  }
+
+  .footer__extra {
+    width: $width-all;
+
+    .footer__button {
+      width: $width-all;
+      height: 100%;
+    }
+  }
+}
+
+@media (min-width: 360px) {
+  .footer {
+    margin-top: 0;
+    height: 191px;
+  }
+}

@@ -1,0 +1,52 @@
+@import '../../../../../styles/sizes-variables.scss';
+@import '../../../../../styles/variables.scss';
+
+.palsListWrapper {
+  width: 100%;
+  padding-top: $padding-m;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $gap-xs;
+
+  h6 {
+    margin: 0;
+    font-family: $main-font-family;
+    font-weight: $font-weight-sm;
+    font-size: $font-size-ml;
+    line-height: $line-height-s;
+    color: $color-neutral-10;
+  }
+
+  p.emptyText {
+    margin: 0;
+    color: $color-neutral-7;
+    font-family: $main-font-family;
+    font-size: $font-size-s;
+    font-weight: $font-weight-s;
+    line-height: $line-height-s;
+    text-align: left;
+  }
+
+  .palsList {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: $gap-s;
+    padding-bottom: 54px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 830px) {
+  .palsListWrapper {
+    .palsList {
+      width: 100%;
+      flex-direction: column;
+      padding-bottom: 24px;
+      align-items: center;
+    }
+    p.emptyText {
+      width: 100%;
+    }
+  }
+}

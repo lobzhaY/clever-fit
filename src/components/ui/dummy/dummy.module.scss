@@ -1,0 +1,58 @@
+@import '../../../styles/sizes-variables.scss';
+@import '../../../styles/variables.scss';
+
+.dummyWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dummyTitle {
+  width: 55%;
+  margin: 0 auto;
+  font-family: $main-font-family;
+  font-weight: $font-weight-sm;
+  font-size: $font-size-l;
+  line-height: $line-height-s;
+  text-align: center;
+  color: $color-neutral-10;
+}
+
+.customDummy {
+  width: $width-all;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap-m;
+
+  .dummyImg {
+    width: 200px;
+    height: 175px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    color: $color-neutral-10;
+    font-family: $main-font-family;
+    font-size: $font-size-l;
+    font-weight: $font-weight-sm;
+    line-height: $line-height-s;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .dummyWrapper {
+    align-items: flex-start;
+    margin-top: 24px;
+  }
+}

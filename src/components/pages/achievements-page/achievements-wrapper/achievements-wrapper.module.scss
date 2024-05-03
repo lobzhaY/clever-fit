@@ -1,0 +1,53 @@
+@import '../../../../styles/sizes-variables.scss';
+@import '../../../../styles/variables.scss';
+
+.achievementsWrapper {
+  width: $width-all;
+  height: 100%;
+}
+
+.achievementsContainer {
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-m;
+
+  overflow: auto;
+  height: 1032px;
+}
+
+.containerWeek {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+
+.containerMonth {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-m;
+}
+
+.loadTitle {
+  margin: 0;
+  color: rgb(38, 38, 38);
+  font-family: $main-font-family;
+  font-size: $font-size-m;
+  font-weight: $font-weight-sm;
+  line-height: $line-height-s;
+  text-align: left;
+}
+
+@media only screen and (min-width: 834px) and (max-width: 1430px) {
+  .containerWeek {
+    gap: 24px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .containerWeek {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-m;
+  }
+}

@@ -1,0 +1,167 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/sizes-variables.scss';
+
+.registration-wrapper {
+  width: $width-all;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $gap-l;
+  box-sizing: border-box;
+
+  .registration-form {
+    width: $width-all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: $gap-s;
+
+    .form-item {
+      width: $width-all;
+      height: $height-m;
+      margin: 0;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      input {
+        width: 368px;
+        height: $height-s;
+      }
+    }
+
+    .form-item-email {
+      width: $width-all;
+      height: 56px;
+      margin: 0;
+
+      box-sizing: border-box;
+      background: $color-neutral-1;
+
+      input {
+        width: $width-all;
+        height: $height-s;
+        border-radius: 0 2px 2px 0;
+      }
+
+      input.ant-input-status-error {
+        border-left-color: $color-neutral-5;
+      }
+    }
+  }
+
+  .registration-buttons {
+    width: $width-all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: $gap-s;
+
+    .buttons-item {
+      width: $width-all;
+      height: $height-s;
+      margin: 0;
+
+      button {
+        width: $width-all;
+        height: $height-s;
+        padding: 6.4px 15px;
+        box-sizing: border-box;
+        border-radius: 2px;
+
+        font-family: $main-font-family;
+        font-size: $font-size-m;
+        font-weight: $font-weight-s;
+        line-height: $line-height-s;
+        text-align: center;
+      }
+
+      .submit {
+        border: 1px solid $color-primary-light-6;
+        background: $color-primary-light-6;
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+
+        color: $color-neutral-1;
+      }
+
+      .google {
+        border: 1px solid $color-neutral-5;
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.02);
+        background: $color-neutral-1;
+      }
+    }
+  }
+}
+
+.google-button {
+  width: $width-all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  span {
+    color: $color-neutral-10;
+  }
+
+  p {
+    margin: 0;
+    width: fit-content;
+    color: $color-neutral-10;
+    font-family: $main-font-family;
+    font-size: $font-size-m;
+    font-weight: $font-weight-s;
+    line-height: $line-height-s;
+    text-align: center;
+  }
+}
+
+.ant-input-group-addon {
+  border-radius: 2px 0 0 2px !important;
+  box-sizing: border-box;
+  border-bottom: 1px solid $color-neutral-5;
+  border-left: 1px solid $color-neutral-5;
+  border-top: 1px solid $color-neutral-5;
+  background: $color-neutral-2;
+  padding: 0 12px;
+  width: 72px;
+  height: $height-s;
+
+  .email-registration {
+    color: $color-neutral-10;
+    font-family: $main-font-family;
+    font-size: $font-size-s;
+    font-weight: $font-weight-s;
+    line-height: $line-height-s;
+    text-align: center;
+  }
+}
+
+.ant-form {
+  width: $width-all;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $gap-l;
+}
+
+.ant-input-affix-wrapper {
+  align-items: center;
+}
+
+@media (max-width: 567px) {
+  .ant-form {
+    gap: $gap-m;
+  }
+
+  .google-button {
+    .span-icon {
+      display: none;
+    }
+  }
+}

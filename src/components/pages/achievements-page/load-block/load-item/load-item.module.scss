@@ -1,0 +1,28 @@
+@import '../../../../../styles/sizes-variables.scss';
+@import '../../../../../styles/variables.scss';
+
+.loadItemWrapper {
+  display: flex;
+  gap: $gap-s;
+  align-items: center;
+  height: 32px;
+}
+
+.loadItemDays {
+  width: 92px;
+  color: $color-neutral-7;
+  font-family: $main-font-family;
+  font-size: $font-size-s;
+  font-weight: $font-weight-s;
+  line-height: $line-height-s;
+  text-align: left;
+}
+
+.loadItemValues {
+  color: $color-neutral-10;
+  font-family: $main-font-family;
+  font-size: $font-size-s;
+  font-weight: $font-weight-m;
+  line-height: $line-height-s;
+  text-align: left;
+}

@@ -1,0 +1,9 @@
+@import '../../../../styles/sizes-variables.scss';
+@import '../../../../styles/variables.scss';
+
+.drawerBodyWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

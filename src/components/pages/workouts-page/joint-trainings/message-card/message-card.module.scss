@@ -1,0 +1,259 @@
+@import '../../../../../styles/sizes-variables.scss';
+@import '../../../../../styles/variables.scss';
+
+.messageWrapper {
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.02);
+  background: $color-neutral-1;
+  padding: 20px 20px 20px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.userContainer {
+  width: 174px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: $gap-xs;
+
+  .userAvatar {
+    background-color: $color-neutral-3;
+    color: $color-neutral-10;
+  }
+
+  .userName {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h6 {
+      margin: 0;
+      color: $color-neutral-10;
+      font-family: $main-font-family;
+      font-size: $font-size-m;
+      font-weight: $font-weight-s;
+      line-height: $line-height-s;
+      text-align: center;
+    }
+  }
+}
+
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+
+  .messageDate {
+    color: $color-neutral-6;
+    font-family: $main-font-family;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-s;
+    line-height: $line-height-s;
+    text-align: left;
+  }
+
+  .messageContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h5 {
+      word-wrap: break-word;
+      word-break: break-word;
+      width: 90%;
+      margin: 0;
+      color: $color-primary-light-9;
+      font-family: $main-font-family;
+      font-size: $font-size-m;
+      font-weight: $font-weight-m;
+      line-height: $line-height-s;
+      text-align: left;
+    }
+
+    button {
+      width: fit-content;
+      border-radius: $border-radius-s;
+      padding: 4px 0;
+      outline: none;
+      border: 0;
+
+      color: $color-primary-light-6;
+      font-family: $main-font-family;
+      font-size: $font-size-s;
+      font-weight: $font-weight-s;
+      line-height: $line-height-s;
+      text-align: center;
+    }
+  }
+}
+
+.actionContainer {
+  width: 206px;
+  padding-left: $padding-m;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: $gap-s;
+
+  button {
+    width: $width-all;
+    height: $height-s;
+    padding: $padding-buttons;
+    box-sizing: border-box;
+    border-radius: $border-radius-s;
+    font-family: $main-font-family;
+    font-size: $font-size-s;
+    font-weight: $font-weight-s;
+    line-height: $line-height-s;
+    text-align: center;
+  }
+
+  .actionTogether {
+    border: 1px solid $color-primary-light-6;
+    background: $color-primary-light-6;
+    color: $color-neutral-1;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+  }
+
+  .actionSingle {
+    border: 1px solid $color-neutral-5;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.02);
+    background: $color-neutral-1;
+    color: $color-neutral-10;
+  }
+}
+
+.popoverTitle {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 12px 12px;
+
+  button {
+    padding: 0;
+  }
+}
+
+.popoverContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 0 0 rgb(240, 240, 240);
+  padding: 24px 12px;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .linePeriod {
+    padding-bottom: 4px;
+    h5 {
+      margin: 0;
+      color: $color-neutral-10;
+      font-family: $main-font-family;
+      font-size: $font-size-m;
+      font-weight: $font-weight-sm;
+      line-height: $line-height-s;
+      text-align: left;
+    }
+    p {
+      margin: 0;
+      color: $color-neutral-10;
+      font-family: $main-font-family;
+      font-size: $font-size-s;
+      font-weight: $font-weight-s;
+      line-height: $line-height-s;
+      text-align: left;
+    }
+  }
+
+  .lineExercises {
+    font-family: $main-font-family;
+    font-size: $font-size-s;
+    font-weight: $font-weight-s;
+    line-height: $line-height-s;
+    text-align: left;
+
+    p {
+      margin: 0;
+      color: $color-neutral-7;
+    }
+
+    span {
+      color: $color-primary-light-6;
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (min-width: 834px) and (max-width: 1439px) {
+  .messageWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $gap-s;
+  }
+
+  .userContainer {
+    width: 100%;
+    flex-direction: row;
+    gap: $gap-s;
+
+    .userName {
+      align-items: flex-start;
+    }
+  }
+
+  .messageContainer {
+    width: 80%;
+    gap: $gap-xs;
+  }
+
+  .actionContainer {
+    width: $width-all;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .messageWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $gap-s;
+  }
+
+  .userContainer {
+    width: 100%;
+    flex-direction: row;
+    gap: $gap-s;
+
+    .userName {
+      align-items: flex-start;
+    }
+  }
+
+  .messageContainer {
+    width: 100%;
+    gap: $gap-xs;
+
+    .messageContent {
+      h5 {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  .actionContainer {
+    width: $width-all;
+    padding-left: 0;
+  }
+}

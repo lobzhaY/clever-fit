@@ -1,0 +1,43 @@
+@import '../../../styles/sizes-variables.scss';
+@import '../../../styles/variables.scss';
+
+.buttonWrapper {
+  width: $width-all;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 15px;
+  gap: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: $border-radius-s;
+
+  .extra__icon {
+    color: $color-neutral-10;
+  }
+
+  p {
+    color: $color-neutral-10;
+    font-size: $font-size-s;
+    font-weight: $font-weight-s;
+    line-height: $line-height-s;
+    text-align: center;
+    margin: 0;
+    font-family: $main-font-family;
+  }
+}
+
+.buttonWrapper:hover {
+  background-color: $color-neutral-2;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+  .buttonWrapper {
+    width: 32px;
+    height: 32px;
+    padding: 4px 9px;
+  }
+}

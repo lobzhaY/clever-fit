@@ -1,0 +1,342 @@
+@import '../../../../styles/sizes-variables.scss';
+@import '../../../../styles/variables.scss';
+
+.profileForm {
+  width: 480px;
+  align-items: flex-start;
+}
+
+.personalInfoWrapper,
+.privacyAuthorizationWrapper {
+  width: $width-all;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-m;
+
+  h5 {
+    margin: 0;
+    font-family: $main-font-family;
+    font-weight: $font-weight-sm;
+    font-size: $font-size-m;
+    line-height: $line-height-s;
+    color: $color-neutral-10;
+  }
+}
+
+.personalInfoContent {
+  width: $width-all;
+  display: flex;
+  align-items: flex-start;
+  gap: $gap-m;
+
+  .personalInfo {
+    width: $width-all;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: $gap-s;
+
+    div {
+      margin-bottom: 0;
+      width: $width-all;
+      height: $height-s;
+
+      input[type='text'] {
+        width: $width-all;
+        height: $height-s;
+        border: 1px solid $color-neutral-5;
+        border-radius: $border-radius-s;
+        padding: 5px 12px;
+
+        font-family: $main-font-family;
+        font-weight: $font-weight-s;
+        font-size: $font-size-s;
+        line-height: $line-height-s;
+        color: $color-neutral-10;
+
+        &::placeholder {
+          font-family: $main-font-family;
+          font-weight: $font-weight-s;
+          font-size: $font-size-s;
+          line-height: $line-height-s;
+          color: $color-neutral-6;
+        }
+      }
+    }
+  }
+}
+
+.privacyAuthorizationContent {
+  width: $width-all;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: $gap-s;
+
+  div {
+    width: $width-all;
+    margin: 0;
+  }
+
+  div.itemEmail {
+    height: 56px;
+
+    input[type='email'] {
+      border: 1px solid $color-neutral-5;
+      border-radius: 0 $border-radius-s $border-radius-s 0;
+      height: $height-s;
+
+      padding: 5px 12px;
+      font-family: $main-font-family;
+      font-weight: $font-weight-s;
+      font-size: $font-size-s;
+      line-height: $line-height-s;
+      color: $color-neutral-10;
+    }
+  }
+
+  div.itemPassword {
+    height: $height-m;
+
+    input[type='password'] {
+      height: $height-s;
+      font-family: $main-font-family;
+      font-weight: $font-weight-s;
+      font-size: $font-size-s;
+      line-height: $line-height-s;
+      color: $color-neutral-10;
+
+      &::placeholder {
+        font-family: $main-font-family;
+        font-weight: $font-weight-s;
+        font-size: $font-size-s;
+        line-height: $line-height-s;
+        color: $color-neutral-6;
+      }
+    }
+  }
+}
+
+.privacyAuthorizationContent:first-child {
+  height: 56px;
+}
+
+.profileBtn {
+  height: $height-s;
+  border: 1px solid $color-primary-light-6;
+  border-radius: 2px;
+  padding: 4px 15px;
+
+  font-family: $main-font-family;
+  font-weight: $font-weight-s;
+  font-size: $font-size-m;
+  line-height: $line-height-s;
+  text-align: center;
+
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+  background-color: $color-primary-light-6;
+  color: $color-neutral-1;
+
+  &:disabled {
+    border-color: $color-neutral-5;
+    background-color: $color-neutral-3;
+    color: $color-neutral-6;
+  }
+}
+
+.alert {
+  border: 1px solid #b7eb8f;
+  border-radius: $border-radius-s;
+  padding: 9px $padding-m;
+  width: 395px;
+  min-height: 36px;
+  background: #f6ffed;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  position: fixed;
+  bottom: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+
+:global {
+  .ant-picker-outlined {
+    border: 1px solid $color-neutral-5;
+    border-radius: $border-radius-s;
+
+    .ant-picker-input {
+      input {
+        width: $width-all;
+        height: $height-s;
+
+        font-family: $main-font-family;
+        font-weight: $font-weight-s;
+        font-size: $font-size-s;
+        line-height: $line-height-s;
+        color: $color-neutral-10;
+      }
+
+      input::placeholder {
+        font-family: $main-font-family;
+        font-weight: $font-weight-s;
+        font-size: $font-size-s;
+        line-height: $line-height-s;
+        color: $color-neutral-6;
+      }
+
+      .ant-picker-suffix {
+        svg path {
+          fill: $color-neutral-6;
+        }
+      }
+    }
+  }
+
+  .ant-input-group-wrapper-outlined .ant-input-group-addon:first-child {
+    width: 71px;
+    height: $height-s;
+    border-bottom: 1px solid $color-neutral-5;
+    border-left: 1px solid $color-neutral-5;
+    border-top: 1px solid $color-neutral-5;
+    border-radius: $border-radius-s 0 0 $border-radius-s;
+    padding: 0 12px;
+    background-color: $color-neutral-2;
+
+    font-family: $main-font-family;
+    font-weight: $font-weight-s;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+    text-align: center;
+    color: $color-neutral-10;
+  }
+
+  .ant-form-item .ant-form-item-explain {
+    margin-top: 4px;
+  }
+
+  .ant-alert-success {
+    .ant-alert-icon {
+      font-size: $font-size-s;
+      margin-inline-end: 0;
+    }
+
+    .ant-alert-content {
+      font-family: $main-font-family;
+      font-weight: $font-weight-s;
+      font-size: $font-size-s;
+      line-height: $line-height-s;
+      color: $color-neutral-10;
+    }
+  }
+
+  .ant-alert .ant-alert-close-icon {
+    color: $color-neutral-7;
+    margin-inline-start: 0;
+  }
+
+  .error-modal {
+    width: 416px;
+
+    .ant-modal-content {
+      border-radius: $border-radius-s;
+      padding: 32px 32px 24px;
+      width: $width-all;
+      box-shadow: 0 9px 28px 8px rgba(0, 0, 0, 0.05), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+        0 3px 6px -4px rgba(0, 0, 0, 0.12);
+      background: $color-neutral-1;
+
+      .ant-modal-confirm-body-wrapper {
+        .ant-modal-confirm-body.ant-modal-confirm-body-has-title {
+          display: flex;
+          gap: $gap-s;
+
+          span {
+            margin-inline-end: 0;
+          }
+
+          .ant-modal-confirm-paragraph {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+          }
+
+          .ant-modal-confirm-title {
+            h6 {
+              margin: 0;
+              font-family: $main-font-family;
+              font-weight: $font-weight-sm;
+              font-size: $font-size-m;
+              line-height: $line-height-s;
+              color: $color-neutral-10;
+            }
+          }
+
+          .ant-modal-confirm-content {
+            p {
+              font-family: $main-font-family;
+              font-weight: $font-weight-s;
+              font-size: $font-size-s;
+              line-height: $line-height-s;
+              color: $color-neutral-10;
+              margin: 0;
+            }
+          }
+        }
+
+        .ant-modal-confirm-btns {
+          button {
+            border: 1px solid $color-primary-light-6;
+            border-radius: $border-radius-s;
+            padding: 4px 15px;
+            height: $height-s;
+            box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+            background: $color-primary-light-6;
+          }
+        }
+      }
+    }
+  }
+
+  #profile_password_help {
+    margin-top: 10px;
+  }
+
+  @media only screen and (min-width: 360px) and (max-width: 833px) {
+    .error-modal {
+      width: 312px;
+
+      .ant-modal-content {
+        padding: 24px 24px 16px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+  .alert {
+    width: 312px;
+  }
+
+  .personalInfoWrapper,
+  .privacyAuthorizationWrapper {
+    gap: 20px;
+  }
+
+  .personalInfoContent {
+    gap: $gap-s;
+    flex-direction: column-reverse;
+  }
+
+  .buttonsItemSubmit {
+    width: 100%;
+  }
+
+  .profileBtn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,101 @@
+@import '../../../../styles/sizes-variables.scss';
+@import '../../../../styles/variables.scss';
+
+.drawerTable {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.headerRow {
+  width: 100%;
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
+
+  div {
+    width: 56px;
+    padding: 8px;
+
+    font-family: $main-font-family;
+    font-weight: $font-weight-s;
+    font-size: 12px;
+    line-height: $line-height-s;
+    text-align: center;
+  }
+
+  .tariffItemFree {
+    color: $color-neutral-10;
+    background-color: $color-neutral-4;
+  }
+
+  .tariffItemPro {
+    color: $color-primary-light-7;
+    background-color: $color-primary-light-1;
+
+    span {
+      color: rgb(82, 196, 26);
+      font-size: $font-size-s;
+    }
+  }
+}
+
+.tableContent {
+  width: 100%;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-s;
+}
+
+.tableItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    width: 56px;
+    font-size: 18px;
+    color: $color-neutral-10;
+  }
+
+  span.ItemFree span {
+    color: $color-neutral-6;
+  }
+
+  span.itemPro span {
+    justify-content: center;
+  }
+}
+
+.flexTariff {
+  display: flex;
+  gap: 14px;
+}
+
+.tableItemName {
+  margin: 0;
+  font-family: $main-font-family;
+  font-weight: $font-weight-s;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  color: $color-neutral-10;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .drawerTable {
+    gap: 12px;
+  }
+
+  .tableContent {
+    padding-bottom: 0;
+    gap: 8px;
+  }
+
+  .tableItem {
+    span {
+      font-size: 16px;
+    }
+  }
+}

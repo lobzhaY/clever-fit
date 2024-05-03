@@ -1,0 +1,191 @@
+@import '../../../../../styles/sizes-variables.scss';
+@import '../../../../../styles/variables.scss';
+
+.cardsWrapper {
+  width: 234px;
+  height: 194px;
+  padding: $padding-m $padding-m 0 $padding-m;
+  border-radius: 2px;
+  background: $color-primary-light-1;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-xs;
+
+  .lineInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.avatarWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  h6 {
+    width: 60%;
+    margin: 0;
+    color: $color-neutral-10;
+    font-family: $main-font-family;
+    font-size: $font-size-s;
+    font-weight: $font-weight-s;
+    line-height: $line-height-s;
+    text-align: left;
+  }
+}
+
+.trainingWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .trainingItem {
+    display: flex;
+    gap: 16px;
+
+    font-family: $main-font-family;
+    line-height: $line-height-s;
+    text-align: left;
+
+    .itemTitle {
+      width: 110px;
+      color: $color-neutral-7;
+      font-size: 12px;
+      font-weight: $font-weight-s;
+    }
+
+    .itemContent {
+      color: $color-primary-light-6;
+      font-size: $font-size-s;
+      font-weight: $font-weight-sm;
+    }
+  }
+}
+
+.activeWrapper {
+  padding-top: 8px;
+  width: 100%;
+
+  button {
+    width: 100%;
+    padding: $padding-buttons;
+    box-sizing: border-box;
+    border: 1px solid $color-primary-light-6;
+    border-radius: $border-radius-s;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+    background: $color-primary-light-6;
+
+    color: $color-neutral-1;
+    font-family: $main-font-family;
+    font-size: $font-size-s;
+    font-weight: $font-weight-s;
+    line-height: $line-height-s;
+    text-align: center;
+  }
+}
+
+.cardsWrapperShort {
+  width: 234px;
+  padding: $padding-s;
+  box-sizing: border-box;
+  border: 1px solid $color-neutral-4;
+  border-radius: $border-radius-s;
+  background: $color-neutral-1;
+
+  .lineInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.cardsWrapperModal {
+  width: 475px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .lineInfo {
+    width: 100%;
+    display: flex;
+
+    .avatarWrapper,
+    .trainingWrapper {
+      width: 50%;
+    }
+  }
+  .activeWrapper {
+    width: 100%;
+    padding-right: 32px;
+    display: flex;
+    flex-direction: row-reverse;
+    box-sizing: border-box;
+
+    .statusBlock {
+      width: 50%;
+    }
+
+    button {
+      width: calc(50% - 32px);
+    }
+  }
+}
+
+.trainingStatus {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  color: $color-neutral-10;
+  font-family: $main-font-family;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-s;
+  line-height: $line-height-s;
+  text-align: left;
+
+  .statusApproved {
+    color: rgb(82, 196, 26);
+    font-size: $font-size-s;
+  }
+  .statusNotApproved {
+    color: rgb(140, 140, 140);
+    font-size: $font-size-s;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 830px) {
+  .cardsWrapper {
+    width: $width-all;
+  }
+
+  .cardsWrapperModal {
+    width: 100%;
+
+    .lineInfo {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+
+      .avatarWrapper,
+      .trainingWrapper {
+        width: 50%;
+      }
+    }
+    .activeWrapper {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 0;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

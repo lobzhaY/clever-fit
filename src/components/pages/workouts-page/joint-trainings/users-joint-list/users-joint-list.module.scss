@@ -1,0 +1,125 @@
+@import '../../../../../styles/sizes-variables.scss';
+@import '../../../../../styles//variables.scss';
+
+.headerUserJoint {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 159px;
+
+    button.action {
+      padding: 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      span {
+        font-size: $font-size-s;
+        color: $color-neutral-10;
+      }
+
+      h4.actionText {
+        margin: 0;
+        color: $color-neutral-10;
+        font-family: $main-font-family;
+        font-size: $font-size-ml;
+        font-weight: $font-weight-sm;
+        line-height: $line-height-s;
+        text-align: left;
+      }
+    }
+
+    .search {
+      border: 1px solid rgb(217, 217, 217);
+      border-radius: 2px;
+      width: 484px;
+
+      input[type='text'] {
+        padding: 4px 12px;
+      }
+
+      button {
+        border-left: 1px solid rgb(217, 217, 217);
+        height: 32px;
+      }
+    }
+  }
+
+  .content {
+    padding-bottom: 18px;
+
+    .cardsWrapper {
+      width: 984px;
+    }
+  }
+}
+
+:global {
+  :where(.css-dev-only-do-not-override-16pdceh).ant-input-group .ant-input-group-addon,
+  :where(.css-dev-only-do-not-override-16pdceh).ant-input-group .ant-input-group-wrap {
+    vertical-align: baseline;
+  }
+  .ant-input-group-addon {
+    height: 32px;
+  }
+  :where(.css-dev-only-do-not-override-16pdceh).ant-input-search
+    > .ant-input-group
+    > .ant-input-group-addon:last-child
+    .ant-input-search-button {
+    border-start-end-radius: 2px;
+    border-end-end-radius: 2px;
+  }
+  :where(.css-dev-only-do-not-override-16pdceh).ant-btn-default {
+    border-color: transparent;
+  }
+  :where(.css-dev-only-do-not-override-16pdceh).ant-input-outlined {
+    border: none;
+  }
+  :where(.css-dev-only-do-not-override-16pdceh).ant-input {
+    border-radius: 2px;
+  }
+  :where(.css-dev-only-do-not-override-16pdceh).ant-list .ant-list-pagination {
+    margin-block-start: 0;
+  }
+}
+
+@media only screen and (min-width: 834px) and (max-width: 1439px) {
+  .headerUserJoint {
+    .header {
+      gap: 64px;
+      .search {
+        width: 380px;
+      }
+    }
+    .content {
+      .cardsWrapper {
+        width: 530px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .headerUserJoint {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      .search {
+        width: 100%;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      .cardsWrapper {
+        width: 312px;
+      }
+    }
+  }
+}

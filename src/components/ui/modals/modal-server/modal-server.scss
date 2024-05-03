@@ -1,0 +1,92 @@
+.confirm-modal {
+  .ant-modal-content {
+    width: 384px;
+    padding: 16px 24px;
+    border-radius: 2px;
+    box-shadow: 0 9px 28px 8px rgba(0, 0, 0, 0.05), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+      0 3px 6px -4px rgba(0, 0, 0, 0.12);
+    background: rgb(255, 255, 255);
+
+    .ant-modal-footer {
+      margin-top: 16px;
+      box-shadow: none;
+      padding: 0;
+      height: auto;
+
+      button {
+        width: 99px;
+        height: 28px;
+        padding: 4px 15px;
+        box-sizing: border-box;
+        border: 1px solid rgb(47, 84, 235);
+        border-radius: 2px;
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+        background: rgb(47, 84, 235);
+
+        color: rgb(255, 255, 255);
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 130%;
+        text-align: center;
+      }
+    }
+
+    .ant-modal-body {
+      box-shadow: none;
+      padding: 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 18px;
+
+      span {
+        font-size: 24px;
+        color: rgb(47, 84, 235);
+      }
+
+      .error-body-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        h6 {
+          width: 70%;
+          margin: 0;
+          color: rgb(38, 38, 38);
+          font-family: Inter;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 130%;
+          letter-spacing: 0%;
+          text-align: left;
+        }
+
+        p {
+          color: rgb(140, 140, 140);
+          font-family: Inter;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 130%;
+          letter-spacing: 0%;
+          text-align: left;
+          margin: 0;
+        }
+      }
+    }
+
+    .ant-modal-close {
+      font-size: 14px;
+      color: rgb(140, 140, 140);
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  .confirm-modal {
+    .ant-modal-content {
+      width: 328px;
+      padding: 32px 32px 24px;
+    }
+  }
+}

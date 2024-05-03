@@ -1,0 +1,225 @@
+@import '../../../styles/sizes-variables.scss';
+@import '../../../styles/variables.scss';
+
+.action-result-card {
+  width: 100%;
+
+  padding: 64px 32px;
+  box-sizing: border-box;
+
+  border-radius: 2px;
+  background: rgb(255, 255, 255);
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .ant-result.ant-result-500 {
+    width: 475px;
+
+    .ant-result-icon.ant-result-image {
+      width: 253.49px;
+      height: 293.27px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .ant-result {
+    width: 368px;
+    padding: 0;
+
+    div {
+      margin-bottom: 24px;
+    }
+
+    .ant-result-icon {
+      margin: 0 auto;
+      width: 80px;
+      height: 80px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        font-size: 70px;
+      }
+    }
+
+    .ant-result-title {
+      margin-block: 0;
+
+      h3 {
+        margin: 0;
+        color: rgb(38, 38, 38);
+        font-family: $main-font-family;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: $line-height-s;
+        text-align: center;
+      }
+    }
+
+    .ant-result-extra {
+      margin: 0;
+      width: $width-all;
+      height: 40px;
+
+      button {
+        height: 100%;
+        box-sizing: border-box;
+        padding: 4px 15px;
+        border-radius: 2px;
+
+        font-family: $main-font-family;
+        font-size: $font-size-s;
+        font-weight: $font-weight-s;
+        line-height: $line-height-s;
+        text-align: center;
+      }
+
+      .modal-button-feedback {
+        width: 100%;
+        border: 1px solid rgb(47, 84, 235);
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+        background: rgb(47, 84, 235);
+        color: rgb(255, 255, 255);
+      }
+
+      .modal-button-back {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid rgb(217, 217, 217);
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.02);
+        background: rgb(255, 255, 255);
+        color: rgb(38, 38, 38);
+      }
+
+      .modal-button-good {
+        width: 100%;
+        border: 1px solid rgb(47, 84, 235);
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+        background: rgb(47, 84, 235);
+        color: rgb(255, 255, 255);
+      }
+
+      .modal-button-server {
+        width: 74px;
+        border: 1px solid rgb(47, 84, 235);
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+        background: rgb(47, 84, 235);
+        color: rgb(255, 255, 255);
+      }
+    }
+
+    .ant-result-subtitle {
+      color: rgb(140, 140, 140);
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 130%;
+      text-align: center;
+    }
+  }
+
+  .ant-result-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .ant-result-icon {
+      margin-bottom: 24px;
+    }
+
+    .ant-result-extra {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+  }
+}
+
+.ant-result-success {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tariff-result {
+  box-shadow: none;
+
+  & > div {
+    width: 475px;
+  }
+}
+
+.iconChangeTariff {
+  color: $color-primary-light-6;
+}
+
+@media (max-width: 567px) {
+  .action-result-card {
+    width: 100%;
+    padding: 32px 16px;
+
+    .ant-card-body {
+      padding: 0;
+
+      .ant-result-500 {
+        width: 475px;
+
+        .ant-result-image {
+          width: 253.49px;
+          height: 293.27px;
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    .ant-result {
+      width: 100%;
+    }
+  }
+}
+
+body
+  > div:nth-child(3)
+  > div
+  > div.ant-modal-wrap.ant-modal-centered
+  > div
+  > div.ant-modal-content
+  > div
+  > div
+  > div {
+  width: 100%;
+}
+
+body
+  > div:nth-child(3)
+  > div
+  > div.ant-modal-wrap.ant-modal-centered
+  > div
+  > div.ant-modal-content
+  > div
+  > div
+  > div
+  > div.ant-result-icon {
+  margin-bottom: 24px;
+}
+
+.traffic-result-span {
+  font-weight: $font-weight-m;
+}
+
+.action-result-card .ant-result .tariff-result-subtitle {
+  width: 97%;
+  word-break: break-all;
+  letter-spacing: 0.2px;
+  margin: 0 auto;
+
+  p {
+    margin: 0;
+    margin-top: 24px;
+  }
+}

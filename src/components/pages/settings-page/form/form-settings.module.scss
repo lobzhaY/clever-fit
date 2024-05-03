@@ -1,0 +1,153 @@
+@import '../../../../styles/sizes-variables.scss';
+@import '../../../../styles/variables.scss';
+
+.form {
+  width: 520px;
+  gap: $gap-s;
+  padding: $padding-m 0;
+  align-items: flex-start;
+}
+
+.formItem {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > div {
+    width: $width-all;
+    height: 22px;
+  }
+}
+
+.itemWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switchLabel {
+  font-family: $main-font-family;
+  font-weight: $font-weight-m;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  color: $color-neutral-10;
+
+  span.labelIcon {
+    font-size: $font-size-m;
+    color: $color-neutral-7;
+    margin-left: 4px;
+  }
+}
+
+.switchLabelDisabled {
+  font-family: $main-font-family;
+  font-weight: $font-weight-m;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  color: $color-neutral-6;
+
+  span.labelIcon {
+    font-size: $font-size-m;
+    color: $color-neutral-7;
+    margin-left: 4px;
+  }
+}
+
+.switch {
+  width: 44px;
+  background-color: $color-neutral-6;
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+:global {
+  .ant-tooltip .ant-tooltip-inner {
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+    border-radius: $border-radius-s;
+    padding: 6px 8px;
+
+    font-family: $main-font-family;
+    font-weight: $font-weight-s;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
+    color: $color-neutral-1;
+  }
+
+  #settings-content
+    > div
+    > div
+    > div.ant-col.ant-form-item-label.css-dev-only-do-not-override-1k979oh
+    > label {
+    height: auto;
+  }
+  #settings-content
+    > div
+    > div
+    > div.ant-col.ant-form-item-control.css-dev-only-do-not-override-1k979oh
+    > div {
+    height: auto;
+    min-height: 22px;
+  }
+  :where(.css-dev-only-do-not-override-1k979oh).ant-form-item .ant-form-item-control-input {
+    align-items: flex-start;
+  }
+
+  @media only screen and (min-width: 360px) and (max-width: 830px) {
+    #settings-content
+      > div
+      > div
+      > div.ant-col.ant-form-item-control.css-dev-only-do-not-override-1k979oh
+      > div {
+      max-width: 50px;
+    }
+    #settings-content
+      > div:nth-child(1)
+      > div
+      > div.ant-col.ant-form-item-control.css-dev-only-do-not-override-1k979oh {
+      max-width: 50px;
+    }
+    :where(.css-dev-only-do-not-override-1k979oh).ant-form:not(.ant-form-inline)
+      .ant-form-item
+      .ant-form-item-label:not([class*=' ant-col-xs']),
+    :where(.css-dev-only-do-not-override-1k979oh).ant-form:not(.ant-form-inline)
+      .ant-form-item
+      .ant-form-item-control:not([class*=' ant-col-xs']) {
+      flex: 80%;
+    }
+
+    #settings-content > div:nth-child(1) > span > span:nth-child(1) {
+      width: 70%;
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .form {
+    width: 100%;
+    gap: 24px;
+  }
+
+  .switchLabel {
+    width: 75%;
+    display: flex;
+    align-items: flex-start;
+
+    p {
+      width: 100%;
+    }
+  }
+
+  .formItem {
+    & > div {
+      height: auto;
+    }
+  }
+
+  .switch {
+    width: 28px;
+  }
+}

@@ -1,0 +1,64 @@
+@import '../../../../styles/sizes-variables.scss';
+@import '../../../../styles/variables.scss';
+
+.tagsWrapper {
+  padding: 16px 0;
+  display: flex;
+  gap: $gap-m;
+
+  .tagsTitle {
+    color: $color-neutral-10;
+    font-family: $main-font-family;
+    font-size: $font-size-s;
+    font-weight: $font-weight-s;
+    line-height: $line-height-s;
+    text-align: left;
+  }
+}
+
+.tags {
+  display: flex;
+  gap: $gap-xs;
+  flex-wrap: wrap;
+
+  span {
+    margin: 0;
+    padding: 1px 8px;
+    box-sizing: border-box;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 2px;
+    color: rgb(38, 38, 38);
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 130%;
+    text-align: left;
+  }
+}
+
+:global {
+  span.ant-tag.ant-tag-checkable.ant-tag-checkable-checked {
+    border: 1px solid $color-primary-light-3;
+    color: $color-primary-light-6;
+  }
+
+  .ant-tag-checkable:not(.ant-tag-checkable-checked):hover {
+    border: 1px solid $color-primary-light-3;
+    color: $color-primary-light-6;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .tagsWrapper {
+    gap: $gap-s;
+    padding: 4px 0;
+
+    .tagsTitle {
+      width: 170px;
+      font-size: 12px;
+    }
+  }
+  .tags {
+    gap: 8px;
+  }
+}

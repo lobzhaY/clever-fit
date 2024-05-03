@@ -1,0 +1,19 @@
+@import '../../styles/sizes-variables.scss';
+
+.result-auth-wrapper {
+  background-image: url('../../assets/result-auth/result-auth_light.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.result-auth-blur {
+  width: $width-all;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(121, 156, 213, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,51 @@
+@import '../../../../styles/sizes-variables.scss';
+@import '../../../../styles/variables.scss';
+
+.oftenCardsWrapper {
+  padding: $padding-ml 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: $gap-s;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: $gap-s;
+
+    font-family: $main-font-family;
+    line-height: $line-height-s;
+    text-align: left;
+
+    span {
+      width: 188px;
+      color: $color-neutral-7;
+      font-size: $font-size-s;
+      font-weight: $font-weight-s;
+      white-space: break-spaces;
+    }
+
+    h6 {
+      margin: 0;
+      color: $color-neutral-10;
+      font-size: $font-size-l;
+      font-weight: $font-weight-sm;
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 833px) {
+  .oftenCardsWrapper {
+    padding: $padding-s 0;
+
+    div {
+      h6 {
+        font-size: $font-size-ml;
+      }
+
+      span {
+        width: 157px;
+      }
+    }
+  }
+}
